@@ -27,3 +27,13 @@
        </script>
      </body>
    </html>
+
+ var dosbox = new Dosbox({
+     id: "dosbox",
+     onload: function (dosbox) {
+       dosbox.run("https://js-dos.com/cdn/digger.zip", "./DIGGER.COM");
+     },
+     onrun: function (dosbox, app) {
+       console.log("App '" + app + "' is runned");
+     }
+   });
